@@ -7,11 +7,29 @@ reservations = ec2.describe_instances(
 mytags = [
     {
         "Key": "Environment",
-        "Value": "Dev"
+        "Value": "Prod"
     }]
 for reservation in reservations:
     for each_instance in reservation["Instances"]:
-        ec2.create_tags(
-            Resources=[each_instance["InstanceId"]],
-            Tags=mytags
-        )
+        if each_instance['KeyName'] == 'lwt-prod-rabbitmq' or each_instance['KeyName'] == 'lwt-prod-mls':
+            ec2.create_tags(
+                Resources=[each_instance["InstanceId"]],
+                Tags=[
+                    {
+                        "Key": "Environment",
+                        "Value": "Prod"
+                    }
+                ]
+            )
+        elif each_instance['KeyName'] == ' lwt-prod-reporting':
+            ec2.create_tags(
+                Resources=[each_instance["InstanceId"]],
+                Tags=[
+                    {
+                        "Key": "Environment",
+                        "Value": "Prod"
+                    }
+                ]
+            )
+        else:
+            pass

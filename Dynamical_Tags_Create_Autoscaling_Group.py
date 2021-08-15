@@ -19,9 +19,9 @@ for asg in ASG_List['AutoScalingGroups']:
                     {
                         'ResourceId': ResourceId,
                         'ResourceType': 'auto-scaling-group',
-                        'Key': 'Environment',
-                        'Value': 'Dev',
+                        'Key': 'BillingUnit',
+                        'Value': 'LoneWolf',
                         'PropagateAtLaunch': True
-                    },
+                    }
                 ]
             )
