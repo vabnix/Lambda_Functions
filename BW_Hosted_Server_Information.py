@@ -2,9 +2,8 @@ import json
 
 import requests
 
-authorization = "Bearer 00D7b0000004cZl!AR8AQKCgmwFtlihHiddJasszrMXBZ9uFp" \
-                "..62ridrzkFITRCwSVmXjFhdsMTzlqxmzEKMs_4Ru0Abc49bw1r9EY0LCBYrsIh "
-baseUrl = "https://lonewolf--lwfull.my.salesforce.com"
+authorization = "{{Bearer token}}"
+baseUrl = "{{salesforce-url}}"
 headers = {'content-type': 'application/json', 'Authorization': authorization}
 
 
@@ -13,7 +12,7 @@ def get_hosting_information(accountId):
     formedAccountUrl = baseUrl + accountId
     AccountResponse = requests.get(formedAccountUrl, headers=headers)
     dump = json.loads(AccountResponse.content)
-    hosting_server = dump['brokerWOLF_Hosting_Server__c']
+    hosting_server = dump['{app_name}_Hosting_Server__c']
     print(dump['Penderis_Code__c'] + " => " + dump['Name'] + " => " + str(
         hosting_server))
 
