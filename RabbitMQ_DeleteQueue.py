@@ -1,6 +1,6 @@
 import pika
 
-parameters = pika.URLParameters('amqp://guest:brEdugeqaq2!@xmb.lwolf.com:5672')
+parameters = pika.URLParameters('')
 # credentials = pika.PlainCredentials('guest', 'brEdugeqaq2!')
 # parameters = pika.ConnectionParameters('xmb.lwolf.com', 5672, '/', credentials)
 connection = pika.BlockingConnection(parameters)
