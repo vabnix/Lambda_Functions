@@ -10,7 +10,7 @@ def apply_tag_on_ec2():
     mytags = [
         {
             "Key": "BillingUnit",
-            "Value": "LionDesk"
+            "Value": "{{account name}}"
         }]
     for reservation in reservations:
         for each_instance in reservation["Instances"]:
@@ -45,7 +45,7 @@ def apply_tag_on_load_balancers():
                     Tags=[
                         {
                             'Key': 'BillingUnit',
-                            'Value': 'LionDesk',
+                            'Value': '{{account name}}',
                         }
                     ],
                 )
@@ -58,7 +58,7 @@ def apply_tag_on_load_balancers():
                         Tags=[
                             {
                                 'Key': 'BillingUnit',
-                                'Value': 'LionDesk',
+                                'Value': '{{account name}}',
                             }
                         ],
                     )
@@ -91,7 +91,7 @@ def apply_tag_on_target_group():
                     Tags=[
                         {
                             'Key': 'BillingUnit',
-                            'Value': 'LionDesk',
+                            'Value': '{{account name}}',
                         }
                     ],
                 )
@@ -104,7 +104,7 @@ def apply_tag_on_target_group():
                         Tags=[
                             {
                                 'Key': 'BillingUnit',
-                                'Value': 'LionDesk',
+                                'Value': '{{account name}}',
                             }
                         ],
                     )
@@ -132,7 +132,7 @@ def apply_tag_on_auto_scaling_groups():
                             'ResourceId': ResourceId,
                             'ResourceType': 'auto-scaling-group',
                             'Key': 'BillingUnit',
-                            'Value': 'LionDesk',
+                            'Value': '{{account name}}',
                             'PropagateAtLaunch': True
                         }
                     ]
@@ -153,7 +153,7 @@ def apply_tag_on_s3_buckets():
                         'TagSet': [
                             {
                                 'Key': 'BillingUnit',
-                                'Value': 'LionDesk'
+                                'Value': '{{account name}}'
                             },
                         ]
                     }
@@ -162,7 +162,7 @@ def apply_tag_on_s3_buckets():
                 bucket_tagging = s3.BucketTagging(Bucket['Name'])
                 tags = bucket_tagging.tag_set
                 print("Updating Bucket - " + Bucket['Name'])
-                tags.append({'Key': 'BillingUnit', 'Value': "LionDesk"})
+                tags.append({'Key': 'BillingUnit', 'Value': "{{account name}}"})
                 Set_Tag = bucket_tagging.put(Tagging={'TagSet': tags})
                 print("--UPDATED--")
         except Exception as e:
