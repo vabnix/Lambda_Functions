@@ -3,7 +3,7 @@ import boto3
 client = boto3.client('cloudformation')
 
 templates = client.get_template(
-    StackName='dev-agent-recruiting-api'
+    StackName='sample-stack-name'
 )
 
 
