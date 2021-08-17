@@ -20,7 +20,7 @@ for asg in ASG_List['AutoScalingGroups']:
                         'ResourceId': ResourceId,
                         'ResourceType': 'auto-scaling-group',
                         'Key': 'BillingUnit',
-                        'Value': 'LoneWolf',
+                        'Value': 'vabnix',
                         'PropagateAtLaunch': True
                     }
                 ]
