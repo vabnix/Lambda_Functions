@@ -2,10 +2,7 @@
 
 from pathlib import Path
 
-path = ['/Users/vaibhavsrivastava/Documents/LWOLF/AWS_SSM/dev/RunResults/dev-lockbit-scan/5d4eb427-571e-4304-bc2c-79ce46f16b11',
-        '/Users/vaibhavsrivastava/Documents/LWOLF/AWS_SSM/stg/RunResults/stg-lockbit-scan/e645964c-a42c-4bc3-8390-7dc1c6347d5d',
-       '/Users/vaibhavsrivastava/Documents/LWOLF/AWS_SSM/pre/RunResults/pre-lockbit-scan/63435af9-ef51-4083-b7bf-9f6435b36813',
-        '/Users/vaibhavsrivastava/Documents/LWOLF/AWS_SSM/prod/RunResults/prod-lockbit-scan/55bdf832-d5ba-4254-9728-c6038b3b36aa']
+path = ['local directory path']
 
 for envPath in path:
     Instance = 0

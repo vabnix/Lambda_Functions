@@ -12,13 +12,13 @@ def pull_existing_user():
 
 
 # Now that we have users that exist in AWS Dev, lets create new users
-UserToAdd = ['aazhar@lwolf.com', 'akorbiel@lwolf.com', 'apearson@lwolf.com', 'aschaffer@lwolf.com',
-             'avandeworp@lwolf.com', 'blocis@lwolf.com', 'calberta@lwolf.com', 'cdickson@lwolf.com',
-             'cpatrick@lwolf.com', 'cschock@lwolf.com', 'drestrepo@lwolf.com', 'ezareei@lwolf.com',
-             'guppal@lwolf.com', 'hhoshyar@lwolf.com', 'hnguyen@lwolf.com', 'jsmiley@lwolf.com',
-             'jstager@lwolf.com', 'kfarat@lwolf.com', 'mchugh@lwolf.com', 'mconte@lwolf.com',
-             'mfullom@lwolf.com', 'mlemieux@lwolf.com', 'msimmons@lwolf.com', 'msueping@lwolf.com',
-             'nkhosla@lwolf.com', 'oasenime@lwolf.com', 'rawasthi@lwolf.com', 'rbhandari@lwolf.com']
+UserToAdd = ['aazhar@vabnix.com', 'akorbiel@vabnix.com', 'apearson@vabnix.com', 'aschaffer@vabnix.com',
+             'avandeworp@vabnix.com', 'blocis@vabnix.com', 'calberta@vabnix.com', 'cdickson@vabnix.com',
+             'cpatrick@vabnix.com', 'cschock@vabnix.com', 'drestrepo@vabnix.com', 'ezareei@vabnix.com',
+             'guppal@vabnix.com', 'hhoshyar@vabnix.com', 'hnguyen@vabnix.com', 'jsmiley@vabnix.com',
+             'jstager@vabnix.com', 'kfarat@vabnix.com', 'mchugh@vabnix.com', 'mconte@vabnix.com',
+             'mfullom@vabnix.com', 'mlemieux@vabnix.com', 'msimmons@vabnix.com', 'msueping@vabnix.com',
+             'nkhosla@vabnix.com', 'oasenime@vabnix.com', 'rawasthi@vabnix.com', 'rbhandari@vabnix.com']
 
 
 def update_login_profile(username):

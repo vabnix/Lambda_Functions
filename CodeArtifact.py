@@ -15,7 +15,7 @@ def get_repository_list():
 
 def get_npm_package_list():
     response = client.list_packages(
-        domain='lonewolf-technologies',
+        domain='vabnix-technologies',
         repository='node-repository',
         format='npm'
     )
@@ -26,14 +26,14 @@ def delete_packages_from_npm():
     packagelist = get_npm_package_list()
     for package in packagelist['packages']:
         packageWithVersion = client.list_package_versions(
-            domain='lonewolf-technologies',
+            domain='vabnix-technologies',
             repository='node-repository',
             format='npm',
             package=package['package']
         )
         print(packageWithVersion)
         response = client.delete_package_versions(
-            domain='lonewolf-technologies',
+            domain='vabnix-technologies',
             repository='node-repository',
             format='npm',
             package=packageWithVersion['package'],

@@ -10,13 +10,13 @@ list = []
 
 
 def get_environment_name(vpcId):
-    if vpcId == 'vpc-67110801':
+    if vpcId == 'vpc-xxxxxx1':
         return 'DEV'
-    elif vpcId == 'vpc-5cf54025':
+    elif vpcId == 'vpc-xxxxxxx5':
         return 'STG'
-    elif vpcId == 'vpc-aea911d6':
+    elif vpcId == 'vpc-xxxxxxx6':
         return 'PRE'
-    elif vpcId == 'vpc-0ee65477':
+    elif vpcId == 'vpc-xxxxxxxx7':
         return 'PROD'
     else:
         return 'UNKNOWN'

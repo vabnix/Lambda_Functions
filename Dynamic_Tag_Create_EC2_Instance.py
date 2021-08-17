@@ -11,7 +11,7 @@ mytags = [
     }]
 for reservation in reservations:
     for each_instance in reservation["Instances"]:
-        if each_instance['KeyName'] == 'lwt-prod-rabbitmq' or each_instance['KeyName'] == 'lwt-prod-mls':
+        if each_instance['KeyName'] == 'vabnix-prod-rabbitmq' or each_instance['KeyName'] == 'vabnix-prod-mls':
             ec2.create_tags(
                 Resources=[each_instance["InstanceId"]],
                 Tags=[
@@ -21,7 +21,7 @@ for reservation in reservations:
                     }
                 ]
             )
-        elif each_instance['KeyName'] == ' lwt-prod-reporting':
+        elif each_instance['KeyName'] == ' vabnix-prod-reporting':
             ec2.create_tags(
                 Resources=[each_instance["InstanceId"]],
                 Tags=[

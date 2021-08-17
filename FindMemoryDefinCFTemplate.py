@@ -7,7 +7,7 @@ import os
 import json
 from collections import defaultdict
 
-path = "/Users/vaibhavsrivastava/Documents/LWOLF/CF_Configuration/lwt-rnd-cf-templates"
+path = "path to template folder"
 directories = os.listdir(path)
 
 
@@ -66,7 +66,7 @@ for items in MemoryAlloc:
 # import os
 # import json
 #
-# path = "/Users/vaibhavsrivastava/Documents/LWOLF/CF_Configuration/lwt-rnd-cf-templates"
+# path = "path to template folder"
 # directories = os.listdir(path)
 #
 #
